@@ -15,10 +15,13 @@ len=${#sequence}
 echo "Length: $len"
 
 #loop through sequence in reverse
-for (( i=$len; i>=0; i-- ))
-do
-    reverse="$reverse${sequence:$i:1}"
-done
+#for (( i=$len; i>=0; i-- ))
+#do
+#    reverse="$reverse${sequence:$i:1}"
+#done
+
+
+reverse=`echo $sequence | rev` 
 
 echo "$sequence
 $reverse
